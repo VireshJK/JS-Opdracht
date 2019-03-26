@@ -1,0 +1,84 @@
+<!--HTML-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visjesvanger</title>
+    <link rel="stylesheet" href="css/eindopdracht.css">
+</head>
+<body>
+
+<img id="visGoed" src="images/visGoed.png">
+<img id="visSlecht" src="images/visSlecht.png">
+
+
+
+<img id="katMood" src="images/katNone.png" alt="Kat neutraal">
+
+
+
+<script src="js/eindopdracht v2.js"></script>
+</body>
+</html>
+
+
+<!--CSS-->
+
+#katMood {
+    position:fixed;
+    bottom:0px;
+    left:45%;
+    height: 30%;
+}
+
+#visGoed {
+
+}
+
+#visSlecht{
+
+}
+
+
+<!--JS-->
+
+//Versie 0.1 Eindopdracht Visjesvanger   -   Viresh Kanhaisingh   -   500749376
+console.log("hallo");
+
+
+
+
+var visEl = document.getElementById("visGoed").src="images/visGoed.png";
+var visRotEl= document.getElementById("visSlecht").src="images/visSlecht.png";
+var katEl = document.getElementById("katMood").src="images/katNone.png";
+
+
+function katMoodSad(){
+    document.getElementById("katMood").src="images/katSad.png";
+}
+
+setInterval(katMoodSad, 4000);
+
+
+
+function katMoodSmile(){
+    document.getElementById("katMood").src="images/katSmile.png";
+    }
+
+function katMoodSick(){
+    document.getElementById("katMood").src="images/katSick.png";
+}
+
+
+
+visGoed.addEventListener("click", katMoodSmile);
+visSlecht.addEventListener("click", katMoodSick);
+
+katMood.addEventListener("mouseover", katMoodSmile);
+
+
+
+
+
+
